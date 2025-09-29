@@ -1,0 +1,288 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en" data-reduce-motion="false">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Corbett’s Castle — Indie Game Studio</title>
+  <meta name="description" content="Independent games from Corbett’s Castle. Whimsical strategy, thoughtful design." />
+  <meta name="keywords" content="Corbett’s Castle, CorbettsCastle, indie games, Carousel Crusade" />
+  <meta name="theme-color" content="#0b1630" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Corbett’s Castle — Indie Game Studio" />
+  <meta property="og:description" content="Independent games from Corbett’s Castle. Whimsical strategy, thoughtful design." />
+  <meta property="og:image" content="/assets/og-image.svg" />
+  <meta property="og:url" content="https://corbettscastle.com/" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Corbett’s Castle — Indie Game Studio" />
+  <meta name="twitter:description" content="Independent games from Corbett’s Castle. Whimsical strategy, thoughtful design." />
+  <meta name="twitter:image" content="/assets/og-image.svg" />
+
+  <link rel="canonical" href="https://corbettscastle.com/" />
+
+  <link rel="preload" href="assets/styles.css" as="style" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script defer src="assets/main.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Corbett’s Castle",
+    "url":"https://corbettscastle.com/",
+    "email":"hello@corbettscastle.com",
+    "logo":"https://corbettscastle.com/assets/og-image.svg",
+    "sameAs":[
+      "https://github.com/CorbettsCastle"
+    ]
+  }
+  </script>
+</head>
+<body id="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="wrap">
+  <a href="#home" class="brand" aria-label="Corbett’s Castle home">Corbett’s Castle</a>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#home" aria-current="page">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#games">Games</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-visuals parallax" aria-hidden="true" data-parallax-container>
+        <div class="sky layer" data-depth="0.05"></div>
+        <div class="stars layer" id="stars1" data-depth="0.03"></div>
+        <div class="stars layer" id="stars2" data-depth="0.04"></div>
+
+        <!-- Drifting Clouds (SVG) -->
+        <svg class="clouds layer" data-depth="0.12" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice">
+          <g class="cloud cloud-a">
+            <path d="M150 200c-40 0-70 25-70 55s30 50 70 50h180c30 0 55-20 55-45s-25-50-55-50c-6-24-30-42-58-42-20 0-38 9-47 22-8-6-18-10-30-10z" />
+          </g>
+          <g class="cloud cloud-b">
+            <path d="M800 120c-45 0-80 28-80 60s35 55 80 55h210c36 0 65-22 65-50s-29-58-65-58c-7-28-35-50-67-50-23 0-44 11-54 25-9-7-21-12-34-12z" />
+          </g>
+          <g class="cloud cloud-c">
+            <path d="M450 40c-35 0-62 22-62 48s27 45 62 45h150c26 0 47-18 47-41s-21-47-47-47c-6-23-27-41-51-41-18 0-34 9-42 20-7-6-16-10-27-10z" />
+          </g>
+        </svg>
+
+        <!-- Inline Castle (parallax layers) - replaced with night castle SVG -->
+  <svg class="castle layer" data-depth="0.12" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" role="img">
+  <defs>
+    <radialGradient id="castleNight-nightSky" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a252f;stop-opacity:1" />
+    </radialGradient>
+    <linearGradient id="castleNight-castleDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#34495e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="castleNight-castleShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a252f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <title>Corbett's Castle — night silhouette</title>
+  <desc>Decorative nighttime castle silhouette used as the hero background.</desc>
+  
+  <!-- Night sky background removed so castle blends with page sky -->
+  
+  <!-- Stars -->
+  <circle cx="100" cy="50" r="2" fill="#ffffff" opacity="0.8"/>
+  <circle cx="150" cy="40" r="1.5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="300" cy="40" r="1.5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="320" cy="60" r="2" fill="#ffffff" opacity="0.8"/>
+  <circle cx="80" cy="80" r="1" fill="#ffffff" opacity="0.5"/>
+  <circle cx="350" cy="90" r="1.5" fill="#ffffff" opacity="0.8"/>
+  <circle cx="280" cy="30" r="1" fill="#ffffff" opacity="0.6"/>
+  
+  <!-- Twinkling stars (diamond shapes) -->
+  <polygon points="200,45 202,47 200,49 198,47" fill="#ffffff" opacity="0.9"/>
+  <polygon points="250,25 252,27 250,29 248,27" fill="#ffffff" opacity="0.7"/>
+  <polygon points="150,25 152,27 150,29 148,27" fill="#ffffff" opacity="0.7"/>
+  <polygon points="120,35 122,37 120,39 118,37" fill="#ffffff" opacity="0.8"/>
+  <polygon points="280,35 282,37 280,39 278,37" fill="#ffffff" opacity="0.8"/>
+  
+  <!-- Ground/hill silhouette -->
+  <ellipse cx="200" cy="280" rx="250" ry="40" fill="#1a252f"/>
+  
+  <!-- Castle silhouette - Main wall -->
+  <rect x="140" y="180" width="120" height="100" fill="url(#castleNight-castleShadow)"/>
+  
+  <!-- Castle main wall battlements - protruding from edges -->
+  <rect x="135" y="170" width="12" height="15" fill="url(#castleNight-castleShadow)"/>
+  <rect x="194" y="170" width="12" height="15" fill="url(#castleNight-castleShadow)"/>
+  <rect x="253" y="170" width="12" height="15" fill="url(#castleNight-castleShadow)"/>
+  
+  <!-- Left tower -->
+  <rect x="110" y="140" width="40" height="140" fill="url(#castleNight-castleShadow)"/>
+  <!-- Left tower roof -->
+  <polygon points="110,140 130,100 150,140" fill="url(#castleNight-castleShadow)"/>
+  <!-- Left tower battlements - 3 total with edges protruding -->
+  <rect x="105" y="130" width="10" height="15" fill="url(#castleNight-castleShadow)"/>
+  <rect x="125" y="130" width="10" height="15" fill="url(#castleNight-castleShadow)"/>
+  <rect x="145" y="130" width="10" height="15" fill="url(#castleNight-castleShadow)"/>
+  
+  <!-- Right tower -->
+  <rect x="250" y="140" width="40" height="140" fill="url(#castleNight-castleShadow)"/>
+  <!-- Right tower roof -->
+  <polygon points="250,140 270,100 290,140" fill="url(#castleNight-castleShadow)"/>
+  <!-- Right tower battlements - 3 total with edges protruding -->
+  <rect x="245" y="130" width="10" height="15" fill="url(#castleNight-castleShadow)"/>
+  <rect x="265" y="130" width="10" height="15" fill="url(#castleNight-castleShadow)"/>
+  <rect x="285" y="130" width="10" height="15" fill="url(#castleNight-castleShadow)"/>
+  
+  <!-- Central tower (tallest) -->
+  <rect x="180" y="100" width="40" height="180" fill="url(#castleNight-castleShadow)"/>
+  <!-- Central tower roof -->
+  <polygon points="180,100 200,60 220,100" fill="url(#castleNight-castleShadow)"/>
+  <!-- Central tower battlements - 3 total with edges protruding -->
+  <rect x="175" y="90" width="10" height="15" fill="url(#castleNight-castleShadow)"/>
+  <rect x="195" y="90" width="10" height="15" fill="url(#castleNight-castleShadow)"/>
+  <rect x="215" y="90" width="10" height="15" fill="url(#castleNight-castleShadow)"/>
+  
+  <!-- Castle gate -->
+  <path d="M 180 280 Q 180 250 200 250 Q 220 250 220 280 Z" fill="#0f1419"/>
+  
+  <!-- Windows (glowing slightly) -->
+  <rect x="192" y="130" width="6" height="12" fill="#2c5f7c" opacity="0.8"/>
+  <rect x="202" y="130" width="6" height="12" fill="#2c5f7c" opacity="0.8"/>
+  <rect x="192" y="160" width="6" height="12" fill="#2c5f7c" opacity="0.6"/>
+  <rect x="202" y="160" width="6" height="12" fill="#2c5f7c" opacity="0.6"/>
+  
+  <!-- Golden flags -->
+  <!-- Left tower flag -->
+  <rect x="128" y="100" width="2" height="25" fill="#8B4513"/>
+  <polygon points="130,100 130,115 150,107.5" fill="#f1c40f"/>
+  
+  <!-- Right tower flag -->
+  <rect x="268" y="100" width="2" height="25" fill="#8B4513"/>
+  <polygon points="270,100 270,115 290,107.5" fill="#f1c40f"/>
+  
+  <!-- Central tower flag -->
+  <rect x="198" y="60" width="2" height="30" fill="#8B4513"/>
+  <polygon points="200,60 200,80 225,70" fill="#f1c40f"/>
+  
+  <!-- Additional atmospheric elements - symmetrical -->
+  <circle cx="60" cy="120" r="1" fill="#ffffff" opacity="0.4"/>
+  <circle cx="340" cy="120" r="1" fill="#ffffff" opacity="0.4"/>
+  <circle cx="30" cy="70" r="1" fill="#ffffff" opacity="0.6"/>
+  <circle cx="370" cy="70" r="1" fill="#ffffff" opacity="0.6"/>
+</svg>
+
+        <!-- Fairy bokeh -->
+        <div class="bokeh layer" data-depth="0.32" aria-hidden="true"></div>
+      </div>
+
+      <div class="wrap hero-copy">
+        <h1 id="hero-title">Independent games from Corbett’s Castle</h1>
+        <p class="subhead">Whimsical strategy, thoughtful design.</p>
+        <div class="cta-row" role="group" aria-label="Primary actions">
+          <a class="btn btn-primary" href="#" rel="noopener">Wishlist on Steam</a>
+          <a class="btn btn-secondary" href="#" rel="noopener">View on Steam</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="wrap">
+        <h2 id="about-title">About</h2>
+        <p>Corbett’s Castle is a tiny indie studio crafting thoughtful, whimsical strategy games with a storybook vibe. We care about clarity, crunchy decisions, and cozy vibes.</p>
+      </div>
+    </section>
+
+    
+    <!-- Games -->
+    <section id="games" class="section" aria-labelledby="games-title">
+      <div class="wrap">
+        <h2 id="games-title">Games</h2>
+        <article class="card game-card">
+          <header class="card-head">
+            <h3>Carousel Crusade</h3>
+            <span class="badge">Coming Soon</span>
+          </header>
+          <div class="game-media">
+            <img class="game-art" src="images/CarouselCrusade.png" alt="Carousel Crusade cover" />
+            <div class="card-body">
+              <p>Build your battle-carousel, time your moves, and conquer the carnival grounds in a tactics roguelike.</p>
+              <div class="card-actions">
+                <a class="btn btn-primary" href="#" rel="noopener">Wishlist on Steam</a>
+                <a class="btn btn-secondary" href="#" rel="noopener">View on Steam</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h2 id="contact-title">Contact</h2>
+        <p>Reach us anytime at <a href="mailto:hello@corbettscastle.com">hello@corbettscastle.com</a>.</p>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="grid">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+          </div>
+          <label>
+            <span>Subject</span>
+            <input type="text" name="subject" placeholder="Message from Website" />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <div class="card-actions">
+            <button class="btn btn-primary" type="submit">Send via Email</button>
+            <a class="btn btn-secondary" href="mailto:hello@corbettscastle.com?subject=Message%20from%20Website">Open Mail</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="wrap footer-grid">
+      <small>© <span id="year"></span> Corbett’s Castle</small>
+      <nav aria-label="Footer">
+        <a href="/privacy.html">Privacy</a>
+        <a href="#" aria-disabled="true">GitHub Repo</a>
+      </nav>
+      <div class="toggles" role="group" aria-label="Accessibility settings">
+        <label class="toggle">
+          <input id="motionToggle" type="checkbox" />
+          <span>Reduce Motion</span>
+        </label>
+        <label class="toggle">
+          <input id="contrastToggle" type="checkbox" />
+          <span>High Contrast</span>
+        </label>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

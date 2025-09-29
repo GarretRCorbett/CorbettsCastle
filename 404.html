@@ -1,0 +1,77 @@
+<!-- 404.html -->
+<!DOCTYPE html>
+<html lang="en" data-reduce-motion="false">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>404 — Lost in the castle</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#0b1630" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script defer src="/assets/main.js"></script>
+  <style>
+    .lost {min-height:70vh; display:grid; place-items:center; text-align:center; position:relative}
+    .lost .castle-bg{position:absolute; inset:0; opacity:.25}
+    .lost .content{position:relative; z-index:2; padding:2rem}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+  <a class="brand" href="/">Corbett’s Castle</a>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#games">Games</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="section lost">
+    <div class="castle-bg" aria-hidden="true">
+      <svg viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%">
+        <!-- Simplified night castle, namespaced fills -->
+        <defs>
+          <linearGradient id="cc404-sky" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#122438" />
+            <stop offset="100%" stop-color="#081022" />
+          </linearGradient>
+        </defs>
+        <rect fill="url(#cc404-sky)" x="0" y="0" width="1200" height="500"/>
+        <rect fill="#081022" x="0" y="410" width="1200" height="90" opacity=".35"/>
+        <g fill="#2b3c66">
+          <rect x="150" y="220" width="90" height="190" />
+          <rect x="260" y="180" width="110" height="230" />
+          <rect x="500" y="200" width="120" height="210" />
+          <rect x="760" y="170" width="110" height="240" />
+        </g>
+        <g fill="#3e4f80">
+          <rect x="420" y="120" width="180" height="290" />
+          <rect x="600" y="160" width="160" height="250" />
+        </g>
+      </svg>
+    </div>
+    <div class="content">
+      <h1>Lost in the castle</h1>
+      <p>The page you’re seeking is in another tower.</p>
+      <p><a class="btn btn-primary" href="/">Return Home</a></p>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <small>© <span id="year"></span> Corbett’s Castle</small>
+      <nav aria-label="Footer">
+        <a href="/privacy.html">Privacy</a>
+        <a href="#" aria-disabled="true">GitHub Repo</a>
+      </nav>
+      <div class="toggles" role="group" aria-label="Accessibility settings">
+        <label class="toggle"><input id="motionToggle" type="checkbox" /><span>Reduce Motion</span></label>
+        <label class="toggle"><input id="contrastToggle" type="checkbox" /><span>High Contrast</span></label>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
