@@ -1,290 +1,221 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en" data-reduce-motion="false">
+<html lang="en">
 <head>
-  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Castle Keep</title>
+  <meta name="description" content="A cozy idle game: grow a lone wooden watchtower into a grand citadel. Hire peasants, raise walls, dodge geese, pass the crown.">
+  <meta name="theme-color" content="#2b3a67">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="canonical" href="https://www.corbettscastle.com/">
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Corbett’s Castle — Indie Game Studio</title>
-  <meta name="description" content="Independent games from Corbett’s Castle. Whimsical strategy, thoughtful design." />
-  <meta name="keywords" content="Corbett’s Castle, CorbettsCastle, indie games, Carousel Crusade" />
-  <meta name="theme-color" content="#0b1630" />
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Castle Keep">
+  <meta property="og:title" content="Castle Keep: grow a castle, one peasant at a time">
+  <meta property="og:description" content="A cozy idle game: grow a lone wooden watchtower into a grand citadel. Plays in your browser, saves automatically.">
+  <meta property="og:image" content="https://www.corbettscastle.com/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A cartoon castle with towers, banners and a moat on a green hill.">
+  <meta property="og:url" content="https://www.corbettscastle.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Castle Keep: grow a castle, one peasant at a time">
+  <meta name="twitter:description" content="A cozy idle game: grow a lone wooden watchtower into a grand citadel.">
+  <meta name="twitter:image" content="https://www.corbettscastle.com/images/og-image.png">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Corbett’s Castle — Indie Game Studio" />
-  <meta property="og:description" content="Independent games from Corbett’s Castle. Whimsical strategy, thoughtful design." />
-  <meta property="og:image" content="/assets/og-image.svg" />
-  <meta property="og:url" content="https://corbettscastle.com/" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Corbett’s Castle — Indie Game Studio" />
-  <meta name="twitter:description" content="Independent games from Corbett’s Castle. Whimsical strategy, thoughtful design." />
-  <meta name="twitter:image" content="/assets/og-image.svg" />
-
-  <link rel="canonical" href="https://corbettscastle.com/" />
-
-  <link rel="preload" href="assets/styles.css" as="style" />
-  <link rel="stylesheet" href="assets/styles.css" />
-  <script defer src="assets/main.js"></script>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Corbett’s Castle",
-    "url":"https://corbettscastle.com/",
-    "email":"hello@corbettscastle.com",
-    "logo":"https://corbettscastle.com/assets/og-image.svg",
-    "sameAs":[
-      "https://github.com/CorbettsCastle"
-    ]
-  }
-  </script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body id="home">
-  <a class="skip-link" href="#main">Skip to content</a>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-gold" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#e8b93a"/><circle cx="12" cy="12" r="7" fill="none" stroke="#b88a1e" stroke-width="1.6"/><path d="M12 7.5v9M9.5 9.5h4a1.5 1.5 0 010 3h-3a1.5 1.5 0 000 3h4" fill="none" stroke="#8a6512" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="i-wood" viewBox="0 0 24 24"><rect x="2" y="7" width="18" height="10" rx="5" fill="#a8733f"/><ellipse cx="19" cy="12" rx="3.5" ry="5" fill="#e0b27a" stroke="#6f4724" stroke-width="1.2"/><circle cx="19" cy="12" r="1.6" fill="none" stroke="#6f4724"/></symbol>
+    <symbol id="i-stone" viewBox="0 0 24 24"><path d="M3 16l3-8 6-3 7 3 2 8-5 4H7z" fill="#a8a293"/><path d="M6 8l6-3 7 3-6 3z" fill="#d0cabb"/><path d="M13 11v9" stroke="#7f796c" stroke-width="1.2"/></symbol>
+    <symbol id="i-crown" viewBox="0 0 24 24"><path d="M3 18l1.5-10 5 5L12 5l2.5 8 5-5L21 18z" fill="#e8b93a" stroke="#b88a1e" stroke-width="1.2" stroke-linejoin="round"/><rect x="3" y="18" width="18" height="3" rx="1" fill="#b88a1e"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><path fill="currentColor" d="M19.4 13a7.5 7.5 0 000-2l2-1.6-2-3.4-2.4 1a7.6 7.6 0 00-1.7-1L15 3.5h-4l-.4 2.5a7.6 7.6 0 00-1.7 1l-2.4-1-2 3.4L6.6 11a7.5 7.5 0 000 2l-2 1.6 2 3.4 2.4-1a7.6 7.6 0 001.7 1l.4 2.5h4l.4-2.5a7.6 7.6 0 001.7-1l2.4 1 2-3.4zM12 15.5a3.5 3.5 0 110-7 3.5 3.5 0 010 7z"/></symbol>
+    <symbol id="i-peasant" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" fill="#f1c7a0"/><path d="M6 5.5h12l-2-3H8z" fill="#c9a05a"/><path d="M5 22c0-6 3-9 7-9s7 3 7 9z" fill="#7986cb"/></symbol>
+    <symbol id="i-woodcutter" viewBox="0 0 24 24"><path d="M6 21L17 6" stroke="#6f4724" stroke-width="2.4" stroke-linecap="round"/><path d="M14 3l6 2-2 6-4-3z" fill="#9aa3ad" stroke="#5f6770" stroke-width="1"/></symbol>
+    <symbol id="i-mason" viewBox="0 0 24 24"><path d="M5 21l9-9" stroke="#6f4724" stroke-width="2.4" stroke-linecap="round"/><rect x="11" y="3" width="10" height="7" rx="1.5" transform="rotate(45 16 6.5)" fill="#8e8778"/></symbol>
+    <symbol id="i-merchant" viewBox="0 0 24 24"><path d="M7 8c-2 3-3 6-3 9a4 4 0 004 4h8a4 4 0 004-4c0-3-1-6-3-9z" fill="#b5835a"/><path d="M8 8l-1-4h10l-1 4z" fill="#8d5f3a"/><text x="12" y="18" text-anchor="middle" font-size="8" font-weight="700" fill="#f2c14e">$</text></symbol>
+    <symbol id="i-build" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7" fill="none" stroke="#c4553d" stroke-width="2.4" stroke-linejoin="round"/><rect x="6" y="11" width="12" height="10" fill="#e8d6b4"/><rect x="10.5" y="15" width="3" height="6" fill="#6f4724"/></symbol>
+    <symbol id="i-castle" viewBox="0 0 24 24"><path d="M3 21V8h3v2h2V8h3v2h2V8h3v2h2V8h3v13h-7v-5a2 2 0 00-4 0v5z" fill="#bdb6a6" stroke="#6b6558" stroke-width="1"/><path d="M12 2v5M12 2l4 1.5-4 1.5" stroke="#c8373a" stroke-width="1.4" fill="#c8373a"/></symbol>
+  </svg>
 
-  <header class="site-header" role="banner">
-    <div class="wrap">
-  <a href="#home" class="brand" aria-label="Corbett’s Castle home">Corbett’s Castle</a>
-      <nav id="site-nav" class="site-nav" aria-label="Primary">
-        <ul>
-          <li><a href="#home" aria-current="page">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#games">Games</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <a class="skip-link" href="#panels">Skip to the shop</a>
+
+  <header class="topbar">
+    <div class="brand">
+      <svg class="brand-icon" aria-hidden="true"><use href="#i-castle"/></svg>
+      <div>
+        <h1>Castle Keep</h1>
+        <p class="ruler" id="ruler">Generation 1</p>
+      </div>
     </div>
+    <button class="icon-btn" id="settingsBtn" type="button" aria-haspopup="dialog">
+      <svg aria-hidden="true"><use href="#i-gear"/></svg><span class="sr-only">Settings</span>
+    </button>
   </header>
 
-  <main id="main">
-    <!-- Hero -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-visuals parallax" aria-hidden="true" data-parallax-container>
-        <div class="sky layer" data-depth="0.05"></div>
-        <div class="stars layer" id="stars1" data-depth="0.03"></div>
-        <div class="stars layer" id="stars2" data-depth="0.04"></div>
+  <div class="resbar" id="resbar" role="group" aria-label="Resources">
+    <div class="res" data-res="gold"><svg aria-hidden="true"><use href="#i-gold"/></svg><span class="sr-only">Gold</span><span class="res-val">0</span><span class="res-rate">+0/s</span></div>
+    <div class="res" data-res="wood"><svg aria-hidden="true"><use href="#i-wood"/></svg><span class="sr-only">Wood</span><span class="res-val">0</span><span class="res-rate">+0/s</span></div>
+    <div class="res" data-res="stone"><svg aria-hidden="true"><use href="#i-stone"/></svg><span class="sr-only">Stone</span><span class="res-val">0</span><span class="res-rate">+0/s</span></div>
+  </div>
 
-        <!-- Drifting Clouds (SVG) -->
-        <svg class="clouds layer" data-depth="0.12" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice">
-          <g class="cloud cloud-a">
-            <path d="M150 200c-40 0-70 25-70 55s30 50 70 50h180c30 0 55-20 55-45s-25-50-55-50c-6-24-30-42-58-42-20 0-38 9-47 22-8-6-18-10-30-10z" />
-          </g>
-          <g class="cloud cloud-b">
-            <path d="M800 120c-45 0-80 28-80 60s35 55 80 55h210c36 0 65-22 65-50s-29-58-65-58c-7-28-35-50-67-50-23 0-44 11-54 25-9-7-21-12-34-12z" />
-          </g>
-          <g class="cloud cloud-c">
-            <path d="M450 40c-35 0-62 22-62 48s27 45 62 45h150c26 0 47-18 47-41s-21-47-47-47c-6-23-27-41-51-41-18 0-34 9-42 20-7-6-16-10-27-10z" />
-          </g>
-        </svg>
-
-        <!-- Inline Castle (parallax layers) - replaced with night castle SVG -->
-  <svg class="castle layer" data-depth="0.12" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false" role="img">
-  <defs>
-    <radialGradient id="castleNight-nightSky" cx="50%" cy="30%" r="70%">
-      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1a252f;stop-opacity:1" />
-    </radialGradient>
-    <linearGradient id="castleNight-castleDark" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#34495e;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="castleNight-castleShadow" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1a252f;stop-opacity:1" />
-    </linearGradient>
-  </defs>
-  <title>Corbett's Castle — night silhouette</title>
-  <desc>Decorative nighttime castle silhouette used as the hero background.</desc>
-  
-  <!-- Night sky background removed so castle blends with page sky -->
-  
-  <!-- Stars -->
-  <circle cx="100" cy="50" r="2" fill="#ffffff" opacity="0.8"/>
-  <circle cx="150" cy="40" r="1.5" fill="#ffffff" opacity="0.6"/>
-  <circle cx="300" cy="40" r="1.5" fill="#ffffff" opacity="0.6"/>
-  <circle cx="320" cy="60" r="2" fill="#ffffff" opacity="0.8"/>
-  <circle cx="80" cy="80" r="1" fill="#ffffff" opacity="0.5"/>
-  <circle cx="350" cy="90" r="1.5" fill="#ffffff" opacity="0.8"/>
-  <circle cx="280" cy="30" r="1" fill="#ffffff" opacity="0.6"/>
-  
-  <!-- Twinkling stars (diamond shapes) -->
-  <polygon points="200,45 202,47 200,49 198,47" fill="#ffffff" opacity="0.9"/>
-  <polygon points="250,25 252,27 250,29 248,27" fill="#ffffff" opacity="0.7"/>
-  <polygon points="150,25 152,27 150,29 148,27" fill="#ffffff" opacity="0.7"/>
-  <polygon points="120,35 122,37 120,39 118,37" fill="#ffffff" opacity="0.8"/>
-  <polygon points="280,35 282,37 280,39 278,37" fill="#ffffff" opacity="0.8"/>
-  
-  <!-- Ground/hill silhouette -->
-  <ellipse cx="200" cy="280" rx="250" ry="40" fill="#1a252f"/>
-  
-  <!-- Castle silhouette - Main wall -->
-  <rect x="140" y="180" width="120" height="100" fill="url(#castleNight-castleShadow)"/>
-  
-  <!-- Castle main wall battlements - protruding from edges -->
-  <rect x="135" y="170" width="12" height="15" fill="url(#castleNight-castleShadow)"/>
-  <rect x="194" y="170" width="12" height="15" fill="url(#castleNight-castleShadow)"/>
-  <rect x="253" y="170" width="12" height="15" fill="url(#castleNight-castleShadow)"/>
-  
-  <!-- Left tower -->
-  <rect x="110" y="140" width="40" height="140" fill="url(#castleNight-castleShadow)"/>
-  <!-- Left tower roof -->
-  <polygon points="110,140 130,100 150,140" fill="url(#castleNight-castleShadow)"/>
-  <!-- Left tower battlements - 3 total with edges protruding -->
-  <rect x="105" y="130" width="10" height="15" fill="url(#castleNight-castleShadow)"/>
-  <rect x="125" y="130" width="10" height="15" fill="url(#castleNight-castleShadow)"/>
-  <rect x="145" y="130" width="10" height="15" fill="url(#castleNight-castleShadow)"/>
-  
-  <!-- Right tower -->
-  <rect x="250" y="140" width="40" height="140" fill="url(#castleNight-castleShadow)"/>
-  <!-- Right tower roof -->
-  <polygon points="250,140 270,100 290,140" fill="url(#castleNight-castleShadow)"/>
-  <!-- Right tower battlements - 3 total with edges protruding -->
-  <rect x="245" y="130" width="10" height="15" fill="url(#castleNight-castleShadow)"/>
-  <rect x="265" y="130" width="10" height="15" fill="url(#castleNight-castleShadow)"/>
-  <rect x="285" y="130" width="10" height="15" fill="url(#castleNight-castleShadow)"/>
-  
-  <!-- Central tower (tallest) -->
-  <rect x="180" y="100" width="40" height="180" fill="url(#castleNight-castleShadow)"/>
-  <!-- Central tower roof -->
-  <polygon points="180,100 200,60 220,100" fill="url(#castleNight-castleShadow)"/>
-  <!-- Central tower battlements - 3 total with edges protruding -->
-  <rect x="175" y="90" width="10" height="15" fill="url(#castleNight-castleShadow)"/>
-  <rect x="195" y="90" width="10" height="15" fill="url(#castleNight-castleShadow)"/>
-  <rect x="215" y="90" width="10" height="15" fill="url(#castleNight-castleShadow)"/>
-  
-  <!-- Castle gate -->
-  <path d="M 180 280 Q 180 250 200 250 Q 220 250 220 280 Z" fill="#0f1419"/>
-  
-  <!-- Windows (glowing slightly) -->
-  <rect x="192" y="130" width="6" height="12" fill="#2c5f7c" opacity="0.8"/>
-  <rect x="202" y="130" width="6" height="12" fill="#2c5f7c" opacity="0.8"/>
-  <rect x="192" y="160" width="6" height="12" fill="#2c5f7c" opacity="0.6"/>
-  <rect x="202" y="160" width="6" height="12" fill="#2c5f7c" opacity="0.6"/>
-  
-  <!-- Golden flags -->
-  <!-- Left tower flag -->
-  <rect x="128" y="100" width="2" height="25" fill="#8B4513"/>
-  <polygon points="130,100 130,115 150,107.5" fill="#f1c40f"/>
-  
-  <!-- Right tower flag -->
-  <rect x="268" y="100" width="2" height="25" fill="#8B4513"/>
-  <polygon points="270,100 270,115 290,107.5" fill="#f1c40f"/>
-  
-  <!-- Central tower flag -->
-  <rect x="198" y="60" width="2" height="30" fill="#8B4513"/>
-  <polygon points="200,60 200,80 225,70" fill="#f1c40f"/>
-  
-  <!-- Additional atmospheric elements - symmetrical -->
-  <circle cx="60" cy="120" r="1" fill="#ffffff" opacity="0.4"/>
-  <circle cx="340" cy="120" r="1" fill="#ffffff" opacity="0.4"/>
-  <circle cx="30" cy="70" r="1" fill="#ffffff" opacity="0.6"/>
-  <circle cx="370" cy="70" r="1" fill="#ffffff" opacity="0.6"/>
-</svg>
-
-        <!-- Fairy bokeh -->
-        <div class="bokeh layer" data-depth="0.32" aria-hidden="true"></div>
-      </div>
-
-      <div class="wrap hero-copy">
-        <h1 id="hero-title">Independent games from Corbett’s Castle</h1>
-        <p class="subhead">Whimsical strategy, thoughtful design.</p>
-        <div class="cta-row" role="group" aria-label="Primary actions">
-          <a class="btn btn-primary" href="#" rel="noopener">Wishlist on Steam</a>
-          <a class="btn btn-secondary" href="#" rel="noopener">View on Steam</a>
+  <main class="layout">
+    <section class="scene-col" aria-label="Your castle">
+      <div class="scene-wrap">
+        <button class="scene" id="scene" type="button">
+          <svg id="art" viewBox="0 0 400 280" role="img" aria-labelledby="artTitle" preserveAspectRatio="xMidYMid slice">
+            <title id="artTitle">Your castle</title>
+            <g id="artBody"></g>
+          </svg>
+          <span class="sr-only" id="sceneLabel">Tap the castle to collect taxes</span>
+        </button>
+        <div class="scene-hud" aria-hidden="true">
+          <span class="chip stage-chip" id="stageChip">Watchtower</span>
+          <span class="buffs" id="buffs"></span>
         </div>
+        <div class="floaters" id="floaters" aria-hidden="true"></div>
+      </div>
+      <p class="tap-hint" id="tapHint">Tap the castle to collect <strong id="clickVal">1</strong> gold</p>
+
+      <div class="card event" id="event" hidden>
+        <div class="event-head">
+          <span class="event-kicker">A herald arrives!</span>
+          <div class="event-timer" aria-hidden="true"><span id="eventTimer"></span></div>
+        </div>
+        <h2 id="eventTitle"></h2>
+        <p id="eventText"></p>
+        <div class="event-choices" id="eventChoices"></div>
+      </div>
+
+      <div class="card stage-card">
+        <h2 id="stageName">Watchtower</h2>
+        <p class="muted" id="stageBlurb"></p>
+        <div id="nextStage"></div>
       </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="section" aria-labelledby="about-title">
-      <div class="wrap">
-        <h2 id="about-title">About</h2>
-        <p>Corbett’s Castle is a tiny indie studio crafting thoughtful, whimsical strategy games with a storybook vibe. We care about clarity, crunchy decisions, and cozy vibes.</p>
+    <section class="panels" id="panels" aria-label="Shop" tabindex="-1">
+      <div class="tabs" role="tablist" aria-label="Shop sections">
+        <button type="button" role="tab" class="tab" id="tab-workers" aria-controls="panel-workers" aria-selected="true">
+          <svg aria-hidden="true"><use href="#i-peasant"/></svg>Workers<span class="badge" id="badge-workers" hidden></span></button>
+        <button type="button" role="tab" class="tab" id="tab-build" aria-controls="panel-build" aria-selected="false" tabindex="-1">
+          <svg aria-hidden="true"><use href="#i-build"/></svg>Build<span class="badge" id="badge-build" hidden></span></button>
+        <button type="button" role="tab" class="tab" id="tab-crown" aria-controls="panel-crown" aria-selected="false" tabindex="-1" hidden>
+          <svg aria-hidden="true"><use href="#i-crown"/></svg>Crown<span class="badge" id="badge-crown" hidden></span></button>
       </div>
-    </section>
 
-    
-    <!-- Games -->
-    <section id="games" class="section" aria-labelledby="games-title">
-      <div class="wrap">
-        <h2 id="games-title">Games</h2>
-        <article class="card game-card">
-          <header class="card-head">
-            <h3>Carousel Crusade</h3>
-            <span class="badge">Coming Soon</span>
-          </header>
-          <div class="game-media">
-            <img class="game-art" src="images/CarouselCrusade.png" alt="Carousel Crusade cover" />
-            <div class="card-body">
-              <p>Build your battle-carousel, time your moves, and conquer the carnival grounds in a tactics roguelike.</p>
-              <div class="card-actions">
-                <a class="btn btn-primary" href="#" rel="noopener">Wishlist on Steam</a>
-                <a class="btn btn-secondary" href="#" rel="noopener">View on Steam</a>
-              </div>
-            </div>
-          </div>
-        </article>
+      <div class="panel" role="tabpanel" id="panel-workers" aria-labelledby="tab-workers">
+        <div class="buy-amount" role="group" aria-label="How many to hire">
+          <span class="muted">Hire</span>
+          <button type="button" class="seg" data-amount="1" aria-pressed="true">×1</button>
+          <button type="button" class="seg" data-amount="10" aria-pressed="false">×10</button>
+          <button type="button" class="seg" data-amount="max" aria-pressed="false">Max</button>
+        </div>
+        <div class="list" id="workerList"></div>
       </div>
-    </section>
 
+      <div class="panel" role="tabpanel" id="panel-build" aria-labelledby="tab-build" hidden>
+        <div class="list" id="buildList"></div>
+        <p class="muted locked-note" id="buildNote"></p>
+        <details class="built" id="builtWrap" hidden>
+          <summary>Already built (<span id="builtCount">0</span>)</summary>
+          <ul id="builtList"></ul>
+        </details>
+      </div>
 
-    <!-- Contact -->
-    <section id="contact" class="section" aria-labelledby="contact-title">
-      <div class="wrap">
-        <h2 id="contact-title">Contact</h2>
-        <p>Reach us anytime at <a href="mailto:hello@corbettscastle.com">hello@corbettscastle.com</a>.</p>
-
-        <form id="contactForm" class="contact-form" novalidate>
-          <div class="grid">
-            <label>
-              <span>Name</span>
-              <input type="text" name="name" autocomplete="name" required />
-            </label>
-            <label>
-              <span>Email</span>
-              <input type="email" name="email" autocomplete="email" required />
-            </label>
-          </div>
-          <label>
-            <span>Subject</span>
-            <input type="text" name="subject" placeholder="Message from Website" />
-          </label>
-          <label>
-            <span>Message</span>
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-          <div class="card-actions">
-            <button class="btn btn-primary" type="submit">Send via Email</button>
-            <a class="btn btn-secondary" href="mailto:hello@corbettscastle.com?subject=Message%20from%20Website">Open Mail</a>
-          </div>
-        </form>
+      <div class="panel" role="tabpanel" id="panel-crown" aria-labelledby="tab-crown" hidden>
+        <div class="card crown-card">
+          <h2>Pass the Crown</h2>
+          <p>Retire to a nice cottage and hand everything to the next generation. Your castle, workers and resources start over, but each point of <strong>Royal Legacy</strong> permanently adds <strong>+10%</strong> to everything you produce and every tap.</p>
+          <dl class="crown-stats">
+            <div><dt>Royal Legacy</dt><dd id="legacyNow">0</dd></div>
+            <div><dt>Current bonus</dt><dd id="legacyBonus">+0%</dd></div>
+            <div><dt>You would gain</dt><dd id="legacyGain">0</dd></div>
+          </dl>
+          <p class="muted" id="crownHint"></p>
+          <button type="button" class="btn btn-primary btn-block" id="prestigeBtn">Pass the Crown</button>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="wrap footer-grid">
-      <small>© <span id="year"></span> Corbett’s Castle</small>
-      <nav aria-label="Footer">
-        <a href="/privacy.html">Privacy</a>
-        <a href="#" aria-disabled="true">GitHub Repo</a>
-      </nav>
-      <div class="toggles" role="group" aria-label="Accessibility settings">
-        <label class="toggle">
-          <input id="motionToggle" type="checkbox" />
-          <span>Reduce Motion</span>
-        </label>
-        <label class="toggle">
-          <input id="contrastToggle" type="checkbox" />
-          <span>High Contrast</span>
-        </label>
+  <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+
+  <dialog id="settingsDlg" aria-labelledby="settingsTitle">
+    <form method="dialog" class="dlg">
+      <div class="dlg-head">
+        <h2 id="settingsTitle">Settings</h2>
+        <button class="icon-btn" value="close" aria-label="Close settings">✕</button>
       </div>
-    </div>
-  </footer>
+
+      <section>
+        <h3>Motion</h3>
+        <label class="field">
+          <span>Animations</span>
+          <select id="motionSel">
+            <option value="system">Follow my device</option>
+            <option value="reduced">Reduced</option>
+            <option value="full">Full</option>
+          </select>
+        </label>
+      </section>
+
+      <section>
+        <h3>Export save</h3>
+        <p class="muted">Copy this code somewhere safe to back up your castle or move it to another device.</p>
+        <textarea id="exportBox" rows="3" readonly aria-label="Save code"></textarea>
+        <button type="button" class="btn" id="copyBtn">Copy code</button>
+      </section>
+
+      <section>
+        <h3>Import save</h3>
+        <p class="muted">Paste a save code. This replaces your current castle.</p>
+        <textarea id="importBox" rows="3" aria-label="Paste a save code" placeholder="CASTLEKEEP:…"></textarea>
+        <button type="button" class="btn" id="importBtn">Import</button>
+        <p class="form-msg" id="importMsg" role="alert"></p>
+      </section>
+
+      <section>
+        <h3>Chronicle</h3>
+        <dl class="stats" id="statsList"></dl>
+      </section>
+
+      <section class="danger">
+        <h3>Reset</h3>
+        <p class="muted">Erase everything, including Royal Legacy, and start from one wooden tower.</p>
+        <button type="button" class="btn btn-danger" id="resetBtn">Reset game…</button>
+      </section>
+    </form>
+  </dialog>
+
+  <dialog id="awayDlg" aria-labelledby="awayTitle">
+    <form method="dialog" class="dlg">
+      <h2 id="awayTitle">While you were away…</h2>
+      <p id="awayText"></p>
+      <ul class="gains" id="awayGains"></ul>
+      <p class="muted" id="awayCap"></p>
+      <button class="btn btn-primary btn-block" value="ok">Splendid</button>
+    </form>
+  </dialog>
+
+  <dialog id="confirmDlg" aria-labelledby="confirmTitle">
+    <form method="dialog" class="dlg">
+      <h2 id="confirmTitle"></h2>
+      <p id="confirmText"></p>
+      <div class="dlg-actions">
+        <button class="btn" value="cancel" id="confirmCancel">Cancel</button>
+        <button class="btn btn-primary" value="ok" id="confirmOk">OK</button>
+      </div>
+    </form>
+  </dialog>
+
+  <noscript><p class="noscript">Castle Keep needs JavaScript to run. The peasants are waiting.</p></noscript>
+
+  <script src="js/game.js"></script>
+  <script src="js/art.js"></script>
+  <script src="js/ui.js"></script>
 </body>
 </html>
